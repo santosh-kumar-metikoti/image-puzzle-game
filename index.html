@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Santosh-Image-Puzzle</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="collage">
+        <h2>Image Puzzle</h2>
+        
+        <div id="playPanel">
+            <h3 id="imgTitle"></h3>
+            <hr />
+            <div>
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div><p>Steps:</p></div>
+                        <div id="stepCount" class="stepCount">0</div>
+                    </div>
+                    <img id="actualImage" />
+                    <div><p>REARRANGE AS SHOWN</p></div>
+                    <p id="levelPanel">
+                        <input type="radio" name="level" id="easy" checked="checked" value="3" onchange="imagePuzzle.startGame(images, this.value);"
+                        /> <label for="easy">3x3</label></br>
+                        <input type="radio" name="level" id="medium" value="4" onchange="imagePuzzle.startGame(images, this.value);" />                        <label for="medium">4x4</label></br>
+                        <input type="radio" name="level" id="hard" value="5" onchange="imagePuzzle.startGame(images, this.value);" />                        <label for="hard">5x5</label></br>
+                    </p>
+                    <div>
+                        <button id="newPhoto" type="button" class="btn" onclick="restart();">NEXT PICTURE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">
+            <div style="background-color: #000000; padding: 5px 10px 20px 10px; text-align: center; ">
+                <h2 style="text-align:center">Game Over</h2>
+                <p>_________Congrats________</p>p> <br /> <p>You have completed this picture In</p>p>
+                <br /> <span id="stepCount" class="stepCount">0</span><p> steps</p>.
+                <br /> Time Taken: <span class="timeCount">0</span> seconds<br />
+                <div>
+                    <button type="button" onclick="window.location.reload(true);">START OVER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
