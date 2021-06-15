@@ -4,6 +4,7 @@
 
 
 
+
 -It is a image rerrange game 
 
 -users can rearrange game by dragging the image parts to its original position
