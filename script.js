@@ -16,7 +16,6 @@
         for (var i = 0; i < gridSize * gridSize; i++) {
             var xpos = (percentage * (i % gridSize)) + '%';
             var ypos = (percentage * Math.floor(i / gridSize)) + '%';
-
             let li = document.createElement('li');
             li.id = i;
             li.setAttribute('data-value', i);
